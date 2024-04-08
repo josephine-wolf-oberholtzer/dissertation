@@ -39,5 +39,5 @@ See also
 - https://github.com/josephine-wolf-oberholtzer/ersilia
 - https://github.com/josephine-wolf-oberholtzer/armilla
 - https://github.com/josephine-wolf-oberholtzer/zaira
-- https://github.com/josephine-wolf-oberholtzer/plague_water
+- https://github.com/josephine-wolf-oberholtzer/plague-water
 - https://github.com/josephine-wolf-oberholtzer/aurora
