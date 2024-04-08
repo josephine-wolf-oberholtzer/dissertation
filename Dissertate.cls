@@ -100,26 +100,28 @@
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[
-    Ligatures=TeX,
-    Extension=.otf,
-    BoldFont=EBGaramond12-Regular,
+    Path=/Users/josephine/Library/Fonts/,
     BoldFeatures={FakeBold=3},
-    ItalicFont=EBGaramond12-Italic,
-    BoldItalicFont=EBGaramond12-Italic,
+    BoldFont=EBGaramond12-Regular,
     BoldItalicFeatures={FakeBold=3},
+    BoldItalicFont=EBGaramond12-Italic,
+    Extension=.otf,
+    ItalicFont=EBGaramond12-Italic,
+    Ligatures=TeX,
     Numbers={Lining},
 ]{EBGaramond12-Regular}
 \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
 %\setromanfont[Numbers=OldStyle, Ligatures={Common}]{EB Garamond}
 %\setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
 \setmonofont[
+    Path=/Users/josephine/Library/Fonts/,
     %BoldFeatures={FakeBold=3},
     %BoldFont=Inconsolata,
     %BoldItalicFeatures={FakeBold=3},
     %BoldItalicFont=Inconsolata,
     %ItalicFont=Inconsolata,
     Scale=MatchLowercase
-]{Inconsolata}
+]{Inconsolata-Regular}
 
 \RequirePackage[
     labelfont={bf,sf,footnotesize,singlespacing},
