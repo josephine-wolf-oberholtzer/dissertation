@@ -6,7 +6,7 @@ Dissertation submitted to Harvard University GSAS on May 15th, 2015.
 Download
 --------
 
-[Get it.](https://github.com/josiah-wolf-oberholtzer/dissertation/raw/master/dissertation.pdf)
+[Get it.](https://github.com/josephine-wolf-oberholtzer/dissertation/raw/master/dissertation.pdf)
 
 Abstract
 --------
@@ -35,9 +35,9 @@ See also
 --------
 
 - https://github.com/Abjad/abjad
-- https://github.com/josiah-wolf-oberholtzer/consort
-- https://github.com/josiah-wolf-oberholtzer/ersilia
-- https://github.com/josiah-wolf-oberholtzer/armilla
-- https://github.com/josiah-wolf-oberholtzer/zaira
-- https://github.com/josiah-wolf-oberholtzer/plague_water
-- https://github.com/josiah-wolf-oberholtzer/aurora
+- https://github.com/josephine-wolf-oberholtzer/consort
+- https://github.com/josephine-wolf-oberholtzer/ersilia
+- https://github.com/josephine-wolf-oberholtzer/armilla
+- https://github.com/josephine-wolf-oberholtzer/zaira
+- https://github.com/josephine-wolf-oberholtzer/plague_water
+- https://github.com/josephine-wolf-oberholtzer/aurora

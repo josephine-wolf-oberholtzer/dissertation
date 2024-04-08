@@ -1188,11 +1188,11 @@ container_one.append(container_two)
 >>> container_one.append(container_two)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/Users/josiah/Development/abjad/abjad/tools/scoretools/Container.py", line 1062, in append
+  File "/Users/josephine/Development/abjad/abjad/tools/scoretools/Container.py", line 1062, in append
     self.__setitem__(slice(len(self), len(self)), [component])
-  File "/Users/josiah/Development/abjad/abjad/tools/scoretools/Container.py", line 218, in __setitem__
+  File "/Users/josephine/Development/abjad/abjad/tools/scoretools/Container.py", line 218, in __setitem__
     return self._set_item(i, expr)
-  File "/Users/josiah/Development/abjad/abjad/tools/scoretools/Container.py", line 561, in _set_item
+  File "/Users/josephine/Development/abjad/abjad/tools/scoretools/Container.py", line 561, in _set_item
     raise ParentageError('Attempted to induce cycles.')
 ParentageError: Attempted to induce cycles.
 \end{minted}
