@@ -90,12 +90,12 @@ timespan = timespantools.Timespan(
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan = timespantools.Timespan(
 ...     start_offset=Offset(1, 4),
 ...     stop_offset=Offset(3, 2),
 ...     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -112,17 +112,17 @@ show(timespan)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> print(format(timespan))
 timespantools.Timespan(
     start_offset=durationtools.Offset(1, 4),
     stop_offset=durationtools.Offset(3, 2),
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(timespan)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-05809ae7a81b0fb2433591be32607181.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b3100d76b8bc4fc2ef1499476cceb8d8.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -144,18 +144,18 @@ timespan.duration
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan.start_offset
 Offset(1, 4)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan.stop_offset
 Offset(3, 2)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan.duration
 Duration(5, 4)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -175,15 +175,15 @@ timepoint_timespan.is_well_formed
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timepoint_timespan = timespantools.Timespan(1, 1)
 >>> timepoint_timespan.duration
 Duration(0, 1)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timepoint_timespan.is_well_formed
 False
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -206,19 +206,19 @@ infinite_timespan.duration
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> infinite_timespan = timespantools.Timespan()
 >>> infinite_timespan.start_offset
 NegativeInfinity
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> infinite_timespan.stop_offset
 Infinity
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> infinite_timespan.duration
 Infinity
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -236,14 +236,14 @@ timespantools.Timespan(start_offset=0)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespantools.Timespan(stop_offset=0)
 Timespan(start_offset=NegativeInfinity, stop_offset=Offset(0, 1))
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespantools.Timespan(start_offset=0)
 Timespan(start_offset=Offset(0, 1), stop_offset=Infinity)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -260,10 +260,10 @@ new(timespan, stop_offset=(5, 16))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> new(timespan, stop_offset=(5, 16))
 Timespan(start_offset=Offset(1, 4), stop_offset=Offset(5, 16))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -300,7 +300,7 @@ annotated_timespan.annotation
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> annotated_timespan = timespantools.AnnotatedTimespan(
 ...     start_offset=(1, 8),
 ...     stop_offset=(7, 8),
@@ -308,7 +308,7 @@ annotated_timespan.annotation
 ...     )
 >>> annotated_timespan.annotation
 'Any arbitrary object can act as an annotation.'
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -339,7 +339,7 @@ print(format(metadata_timespan))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> metadata_timespan = new(annotated_timespan,
 ...     stop_offset=(3, 2),
 ...     annotation={
@@ -374,7 +374,7 @@ timespantools.AnnotatedTimespan(
             ),
         },
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -441,7 +441,7 @@ print(format(time_relation_1))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> time_relation_1 = timespantools.timespan_2_intersects_timespan_1()
 >>> print(format(time_relation_1))
 timespantools.TimespanTimespanTimeRelation(
@@ -465,7 +465,7 @@ timespantools.TimespanTimespanTimeRelation(
         logical_operator='or',
         ),
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -495,17 +495,17 @@ time_relation_2(timespan_2=timespantools.Timespan(30, 45))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> time_relation_2 = timespantools.timespan_2_intersects_timespan_1(
 ...     timespan_1=timespantools.Timespan(0, 10),
 ...     )
 >>> time_relation_2(timespan_2=timespantools.Timespan(5, 15))
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> time_relation_2(timespan_2=timespantools.Timespan(30, 45))
 False
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -527,13 +527,13 @@ timespantools.timespan_2_intersects_timespan_1(
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespantools.timespan_2_intersects_timespan_1(
 ...     timespan_1=timespantools.Timespan(1, 3),
 ...     timespan_2=timespantools.Timespan(2, 4),
 ...     )
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -559,11 +559,11 @@ timespan_3 = timespantools.Timespan(10, 20)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_1 = timespantools.Timespan(0, 10)
 >>> timespan_2 = timespantools.Timespan(5, 15)
 >>> timespan_3 = timespantools.Timespan(10, 20)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -587,7 +587,7 @@ show(timespan_inventory)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-46be4544871ad44bf0fbd5b2d540b4e0.pdf}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d712865a7ac4a0c98b9d2d973a74ed16.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -614,30 +614,30 @@ timespan_3.intersects_timespan(timespan_2)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_1.intersects_timespan(timespan_2)
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_1.intersects_timespan(timespan_3)
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_2.intersects_timespan(timespan_1)
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_2.intersects_timespan(timespan_3)
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_3.intersects_timespan(timespan_1)
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_3.intersects_timespan(timespan_2)
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -654,14 +654,14 @@ timespan_1.is_congruent_to_timespan(timespan_1)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_1.is_congruent_to_timespan(timespan_2)
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_1.is_congruent_to_timespan(timespan_1)
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -680,14 +680,14 @@ timespan_1.is_tangent_to_timespan(timespan_3)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_1.is_tangent_to_timespan(timespan_2)
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_1.is_tangent_to_timespan(timespan_3)
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -717,19 +717,19 @@ timespan.round_offsets(2)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan = timespantools.Timespan(0, 15)
 >>> timespan.translate(3)
 Timespan(start_offset=Offset(3, 1), stop_offset=Offset(18, 1))
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan.scale(3)
 Timespan(start_offset=Offset(0, 1), stop_offset=Offset(45, 1))
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan.round_offsets(2)
 Timespan(start_offset=Offset(0, 1), stop_offset=Offset(16, 1))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -750,7 +750,7 @@ print(format(scaled_annotated_timespan))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> annotated_timespan = timespantools.AnnotatedTimespan(0, 5, 'an annotation')
 >>> scaled_annotated_timespan = annotated_timespan.translate((-1, 3))
 >>> print(format(scaled_annotated_timespan))
@@ -759,7 +759,7 @@ timespantools.AnnotatedTimespan(
     stop_offset=durationtools.Offset(14, 3),
     annotation='an annotation',
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -787,7 +787,7 @@ print(format(one_shard))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> two_shards = timespan.split_at_offset(5)
 >>> print(format(two_shards))
 timespantools.TimespanInventory(
@@ -802,8 +802,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> one_shard = timespan.split_at_offset(10000)
 >>> print(format(one_shard))
 timespantools.TimespanInventory(
@@ -814,7 +814,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -839,22 +839,22 @@ set([1, 2, 3]) ^ set([2, 3, 4])  # symmetric difference
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> set([1, 2, 3]) | set([2, 3, 4])  # union
-set([1, 2, 3, 4])
-\end{minted}
-\begin{minted}{pycon}
+{1, 2, 3, 4}
+\end{lstlisting}
+\begin{lstlisting}
 >>> set([1, 2, 3]) - set([2, 3, 4])  # difference
-set([1])
-\end{minted}
-\begin{minted}{pycon}
+{1}
+\end{lstlisting}
+\begin{lstlisting}
 >>> set([1, 2, 3]) & set([2, 3, 4])  # intersection
-set([2, 3])
-\end{minted}
-\begin{minted}{pycon}
+{2, 3}
+\end{lstlisting}
+\begin{lstlisting}
 >>> set([1, 2, 3]) ^ set([2, 3, 4])  # symmetric difference
-set([1, 4])
-\end{minted}
+{1, 4}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -892,14 +892,14 @@ print(format(result))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) - timespantools.Timespan(0, 10)
 >>> print(format(result))
 timespantools.TimespanInventory(
     []
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) - timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -910,8 +910,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) - timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -922,8 +922,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) - timespantools.Timespan(0, 10)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -934,15 +934,15 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) - timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
     []
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) - timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -953,8 +953,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(10, 20) - timespantools.Timespan(0, 10)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -965,8 +965,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(10, 20) - timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -977,14 +977,14 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(10, 20) - timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
     []
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1006,7 +1006,7 @@ print(format(result))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) | timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1017,8 +1017,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) | timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1029,8 +1029,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) | timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1041,7 +1041,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1059,7 +1059,7 @@ print(format(result))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(10, 20) | timespantools.Timespan(25, 50)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1074,7 +1074,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1096,7 +1096,7 @@ print(format(result))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) & timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1107,15 +1107,15 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) & timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
     []
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) & timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1126,7 +1126,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1149,7 +1149,7 @@ print(format(result))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) ^ timespantools.Timespan(5, 15)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1164,8 +1164,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(0, 10) ^ timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1180,8 +1180,8 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> result = timespantools.Timespan(5, 15) ^ timespantools.Timespan(10, 20)
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1196,7 +1196,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1257,7 +1257,7 @@ show(timespan_inventory)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 16),
 ...     ])
@@ -1287,11 +1287,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2f656dbdec09167712bdf4582f008215.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4726f4417b378162039d889693b6263e.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1311,15 +1311,15 @@ for timespan in timespan_inventory:
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> len(timespan_inventory)
 4
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory[1]
 Timespan(start_offset=Offset(5, 1), stop_offset=Offset(12, 1))
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> for timespan in timespan_inventory:
 ...     timespan
 ...
@@ -1327,7 +1327,7 @@ Timespan(start_offset=Offset(0, 1), stop_offset=Offset(16, 1))
 Timespan(start_offset=Offset(5, 1), stop_offset=Offset(12, 1))
 Timespan(start_offset=Offset(-2, 1), stop_offset=Offset(8, 1))
 Timespan(start_offset=Offset(15, 1), stop_offset=Offset(20, 1))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1352,16 +1352,16 @@ print(format(duplicate))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> duplicate = timespantools.TimespanInventory(timespan_inventory)
 >>> duplicate == timespan_inventory
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> duplicate is timespan_inventory
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> print(format(duplicate))
 timespantools.TimespanInventory(
     [
@@ -1383,7 +1383,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1408,22 +1408,22 @@ timespan_inventory.timespan
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory.start_offset
 Offset(-2, 1)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.stop_offset
 Offset(20, 1)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.duration
 Duration(22, 1)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.timespan
 Timespan(start_offset=Offset(-2, 1), stop_offset=Offset(20, 1))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1447,18 +1447,18 @@ timespan_inventory.all_are_well_formed
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_contiguous
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_nonoverlapping
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_well_formed
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1481,23 +1481,23 @@ timespan_inventory.all_are_nonoverlapping
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(10, 20),
 ...     timespantools.Timespan(30, 40),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2eb24ce655399fc3046bddefd4ee00f7.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9f09435a2f810254b54714279c7e9647.pdf}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_contiguous
 False
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_nonoverlapping
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1520,23 +1520,23 @@ timespan_inventory.all_are_nonoverlapping
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(10, 20),
 ...     timespantools.Timespan(20, 30),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a1c12d89a8b9c91d480abba32e96e2dc.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a1baed7bfeed978bb65500b80aa5dfaa.pdf}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_contiguous
 True
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> timespan_inventory.all_are_nonoverlapping
 True
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1581,21 +1581,21 @@ show(result, range_=(-2, 16))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 16),
 ...     timespantools.Timespan(5, 12),
 ...     timespantools.Timespan(-2, 8),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-7c7fbf8d84f2126064f0635aa9f7b2dc.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e4ac71f562009c05e193ba9dae85efdd.pdf}
+\begin{lstlisting}
 >>> timespan_operand = timespantools.Timespan(6, 10)
 >>> result = timespan_inventory & timespan_operand
 >>> show(result, range_=(-2, 16))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0fae3f5a6fe80da48374ca36bb834234.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4ec264f65bc996c864a9b48ac5cbe14c.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1620,21 +1620,21 @@ show(result)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 16),
 ...     timespantools.Timespan(5, 12),
 ...     timespantools.Timespan(-2, 8),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-7c7fbf8d84f2126064f0635aa9f7b2dc.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e4ac71f562009c05e193ba9dae85efdd.pdf}
+\begin{lstlisting}
 >>> timespan_operand = timespantools.Timespan(6, 10)
 >>> result = timespan_inventory - timespan_operand
 >>> show(result)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2e623740e7da40730874da101ce7cb01.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5d9d796f54f891599cc7acc9617fba2c.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1659,24 +1659,24 @@ show(right, range_=(0, 10))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 3),
 ...     timespantools.Timespan(3, 6),
 ...     timespantools.Timespan(6, 10),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-074092eb387634e20a090391091d0211.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-bc05b18dd221846a1b5430dc627a3267.pdf}
+\begin{lstlisting}
 >>> left, right = timespan_inventory.split_at_offset(4)
 >>> show(left, range_=(0, 10))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f1df3316976b680b06b34e57dd7c9b67.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2c04274609f97953ec8bbd89aadfc413.pdf}
+\begin{lstlisting}
 >>> show(right, range_=(0, 10))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b0b4ea22c46981a18b6afe50b6fcdd20.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5c670f59eefed207b68b3aa367cfa353.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1702,25 +1702,25 @@ for shard in shards:
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 3),
 ...     timespantools.Timespan(3, 6),
 ...     timespantools.Timespan(6, 10),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-074092eb387634e20a090391091d0211.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-bc05b18dd221846a1b5430dc627a3267.pdf}
+\begin{lstlisting}
 >>> shards = timespan_inventory.split_at_offsets((2, 4, 7))
 >>> for shard in shards:
 ...     show(shard, range_=(0, 10))
 ...
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d04f11f64b7339eacb73fa961aa1fda8.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-730c4f4e0cea71276fdf997a39df6a4e.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-57c81baa0f9373bcf8fe0c884b910646.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b927f5ca7988ca25d1e5f7a8eddeb3ad.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8cdbcbe275ccdcc3038766c9b4580673.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-03b59921ab73c58e2c661e7d3364e624.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c4d0f7c242913d0a80560789c3b0ab4e.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-918651bb6ef95a5e53cf69fa8f3ecd15.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1750,16 +1750,16 @@ show(result)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(-2, 2),
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(5, 12),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-da44eec919c9f855b8cdac159c5fb724.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-402948e94dba6dbc434d48c8145c57dd.pdf}
+\begin{lstlisting}
 >>> result = timespan_inventory.compute_logical_or()
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1770,11 +1770,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(result)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-732626bcd9add538ce56ad9c456f93cc.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-93d6426a2cc8f4fb4a4e5be559f6d05f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1800,16 +1800,16 @@ show(result, range_=(-2, 12))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(-2, 8),
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(5, 12),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a525be51f2425338cbbdb7238e2ba4ee.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9f1143a1ffcd1066c5d9e2e28e6eec92.pdf}
+\begin{lstlisting}
 >>> result = timespan_inventory.compute_logical_and()
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1820,11 +1820,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(result, range_=(-2, 12))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-36707c8f5eee1f21f2f36d34af0ca735.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f664c6f8f12bfd71ac9b5f6dbbc33904.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1849,16 +1849,16 @@ show(result, range_=(-2, 12))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(-2, 2),
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(5, 12),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-da44eec919c9f855b8cdac159c5fb724.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-402948e94dba6dbc434d48c8145c57dd.pdf}
+\begin{lstlisting}
 >>> result = timespan_inventory.compute_logical_xor()
 >>> print(format(result))
 timespantools.TimespanInventory(
@@ -1877,11 +1877,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(result, range_=(-2, 12))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a923eb4d200cefe6d44ed2800258c122.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c4bced359d52fc228d82504dad1f5ba4.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1911,7 +1911,7 @@ for shard in timespan_inventory.partition(include_tangent_timespans=True):
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(0, 10),
 ...     timespantools.Timespan(5, 15),
@@ -1919,23 +1919,23 @@ for shard in timespan_inventory.partition(include_tangent_timespans=True):
 ...     timespantools.Timespan(25, 30),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f088ae951e4c3b797a2899b3febc7f13.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b48506e273798d2fea2e8fdba0378814.pdf}
+\begin{lstlisting}
 >>> for shard in timespan_inventory.partition():
 ...     show(shard, range_=(0, 30))
 ...
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-dabf1ac0fc44277c6c15b6564ed9cbde.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e6cd1e7ea0b9c56d6b9a676ee97e15d2.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-3de25fb8aa9f4a27f18e81b088631887.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-492c078aaef1fd59600c5b1c38737642.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-02aeb9051437a5d2a90b85d427030ed4.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-30e5e94c6e957e6b83641b120220f02f.pdf}
+\begin{lstlisting}
 >>> for shard in timespan_inventory.partition(include_tangent_timespans=True):
 ...     show(shard, range_=(0, 30))
 ...
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5b8deba769a4e54af9ef7260c65c36f4.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-3de25fb8aa9f4a27f18e81b088631887.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2f62a1453c221a34cf8649282bfca6e4.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-30e5e94c6e957e6b83641b120220f02f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -1972,7 +1972,7 @@ for shard in timespan_inventory.explode():
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     timespantools.Timespan(-2, 8),
 ...     timespantools.Timespan(-2, 1),
@@ -1985,18 +1985,18 @@ for shard in timespan_inventory.explode():
 ...     timespantools.Timespan(15, 20),
 ...     ])
 >>> show(timespan_inventory)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b64b5b3230721ad32fe21220479e9b08.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4294c9b16654e79dd8b4196742239392.pdf}
+\begin{lstlisting}
 >>> for shard in timespan_inventory.explode():
 ...     show(shard, range_=(-2, 20))
 ...
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-62c9390bf5a067707305398d0567d290.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c429f2b829cb801098419217c335433c.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-96a540b5c0661e70ab8ad629ee644214.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1c08de48332d145fe5161e21de5201c4.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-64e4c1a31ec022c11b4a1239375058f4.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5ec748d0f728293a5d459c82959f17cd.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e464b429ad2c464ebaf94adafd95ce9e.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-3c6ced1ab399cfbd8ebd12a5d8934d08.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a93476ed8c64a7ed353f12f43db9c57a.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4523a9f494a81dc3d4387bf083e19831.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2015,13 +2015,13 @@ for shard in timespan_inventory.explode(inventory_count=2):
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> for shard in timespan_inventory.explode(inventory_count=2):
 ...     show(shard, range_=(-2, 20))
 ...
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0c6170bdd6a5af615963601e9562d469.pdf}\\
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b15ba27ffc7c7ac3cd8175ebf7f5dfbd.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-306b8e3d24f2f5ce8c75821376795e02.pdf}\\
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e58a3df0e9d7412a2346fc397b0c2faf.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2086,14 +2086,14 @@ performed_timespan = consort.PerformedTimespan(
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> performed_timespan = consort.PerformedTimespan(
 ...     layer=1,
 ...     start_offset=(1, 2),
 ...     stop_offset=(7, 8),
 ...     voice_name='Clarinet Voice',
 ...     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2123,7 +2123,7 @@ performed_timespan = consort.PerformedTimespan(
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> performed_timespan = consort.PerformedTimespan(
 ...     layer=1,
 ...     minimum_duration=Duration(1, 8),
@@ -2132,7 +2132,7 @@ performed_timespan = consort.PerformedTimespan(
 ...     stop_offset=Offset(2, 1),
 ...     voice_name='Violin 1 LH Voice',
 ...     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2158,14 +2158,14 @@ silent_timespan = consort.SilentTimespan(
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> silent_timespan = consort.SilentTimespan(
 ...     layer=2,
 ...     start_offset=Offset(0, 1),
 ...     stop_offset=Offset(1, 4),
 ...     voice_name='Oboe Voice',
 ...     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2247,7 +2247,7 @@ print(format(timespan_inventory))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> music_specifiers = {'Violin Voice': 'violin music'}
 >>> target_timespan = timespantools.Timespan((1, 4), (11, 8))
 >>> flooded_timespan_maker = consort.FloodedTimespanMaker()
@@ -2266,7 +2266,7 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2295,7 +2295,7 @@ show(timespan_inventory, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> music_specifiers = {
 ...     'Violin Voice': 'violin music',
 ...     'Cello Voice': 'cello music',
@@ -2324,11 +2324,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4e7982fd6e82b0e6bce7298c4a334df8.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8d77957c263afcb4a70dfe949721f0a6.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2360,7 +2360,7 @@ show(timespan_inventory, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> flooded_timespan_maker = consort.FloodedTimespanMaker(
 ...     padding=Duration(1, 4),
 ...     timespan_specifier=consort.TimespanSpecifier(
@@ -2417,11 +2417,11 @@ timespantools.TimespanInventory(
             ),
         ]
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-31e8be4dacb46526044fd9dd74b9e057.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-10785f5970f03e0205cf91e8bc6588f9.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2454,7 +2454,7 @@ talea[99999]
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea = rhythmmakertools.Talea(
 ...     counts=[1, 2, 3, 4],
 ...     denominator=16,
@@ -2472,11 +2472,11 @@ NonreducedFraction(3, 16)
 NonreducedFraction(4, 16)
 NonreducedFraction(1, 16)
 NonreducedFraction(2, 16)
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> talea[99999]
 NonreducedFraction(4, 16)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2503,7 +2503,7 @@ print(format(talea_timespan_maker))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = consort.TaleaTimespanMaker()
 >>> print(format(talea_timespan_maker))
 consort.tools.TaleaTimespanMaker(
@@ -2521,7 +2521,7 @@ consort.tools.TaleaTimespanMaker(
     synchronize_groupings=False,
     synchronize_step=False,
     )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2558,7 +2558,7 @@ target_timespan = timespantools.Timespan(0, (19, 4))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> import collections
 >>> music_specifiers = collections.OrderedDict([
 ...     ('Voice 1', None),
@@ -2567,7 +2567,7 @@ target_timespan = timespantools.Timespan(0, (19, 4))
 ...     ('Voice 4', None),
 ...     ])
 >>> target_timespan = timespantools.Timespan(0, (19, 4))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2589,14 +2589,14 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = talea_timespan_maker(
 ...     music_specifiers=music_specifiers,
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-64e84e1b5bd31c8714b052473ae3394f.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e3a5069d5b0fc9031f547b54b6f20a01.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2630,7 +2630,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = new(
 ...     talea_timespan_maker,
 ...     playing_talea=rhythmmakertools.Talea(
@@ -2643,8 +2643,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-3b3f1b99ef35d9c3d5248dd534298d27.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-27e6b389700486cdb1e690211f305a4d.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2675,7 +2675,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = new(
 ...     talea_timespan_maker,
 ...     playing_groupings=(1, 2),
@@ -2685,8 +2685,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2975068cc50a0be81eca98215e71ee6e.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-346d071708fc664289b03a4721497687.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2714,7 +2714,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = new(
 ...     talea_timespan_maker,
 ...     silence_talea=rhythmmakertools.Talea(
@@ -2727,8 +2727,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-28cfdcef629853d17e700e6499df96a8.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-7b944fcc153075761901edd8195b3e32.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2755,7 +2755,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = new(
 ...     talea_timespan_maker,
 ...     initial_silence_talea=rhythmmakertools.Talea(
@@ -2768,8 +2768,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-244b12c834767f1ee6ff65aa75a26bf9.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-548f4c0d948374607cff746816857f79.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2795,7 +2795,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_timespan_maker = new(
 ...     talea_timespan_maker,
 ...     reflect=True,
@@ -2805,8 +2805,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e335a4b9080808b2bc75e427feb0a946.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-36f23e7a3d2536cbc36a14785b3da892.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2843,7 +2843,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> synchronized_talea_timespan_maker = consort.TaleaTimespanMaker(
 ...     playing_talea=rhythmmakertools.Talea(
 ...         counts=(1, 2, 3, 4, 5),
@@ -2860,8 +2860,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-437376437a5c347835eb76a73c2e44d3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a6824fe0661fa2047882450244bd78e4.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2906,7 +2906,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> synchronized_talea_timespan_maker = new(
 ...     synchronized_talea_timespan_maker,
 ...     initial_silence_talea=rhythmmakertools.Talea(
@@ -2919,8 +2919,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-57a077185df7102e2725776d3bfc067e.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-04bf2fcceb3660de8203975bbeb119ff.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2946,7 +2946,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> synchronized_talea_timespan_maker = new(
 ...     synchronized_talea_timespan_maker,
 ...     padding=(1, 8),
@@ -2956,8 +2956,8 @@ show(result, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-75d6d936576d790d92405072590451ab.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0369e92413ae5e90ea28bca05b7f1f4a.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -2999,7 +2999,7 @@ show(timespan_inventory, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan_inventory = timespantools.TimespanInventory([
 ...     consort.PerformedTimespan(0, 10, voice_name='Voice 1'),
 ...     consort.PerformedTimespan(0, 10, voice_name='Voice 2'),
@@ -3014,8 +3014,8 @@ show(timespan_inventory, key='voice_name')
 ...     consort.PerformedTimespan(50, 60, voice_name='Voice 1'),
 ...     ])
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9ea33611ee52cd7ee1567a9f63d156a2.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b71fab17910292481b95569e3907e400.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3048,7 +3048,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> music_specifiers = {'Dependent Voice': None}
 >>> dependent_timespan_maker = consort.DependentTimespanMaker(
 ...     voice_names=(
@@ -3061,8 +3061,8 @@ show(result, key='voice_name')
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1dd8eacde0e4f7b507275eef504d1b08.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e7b8ea59045b4c22b1d01b22d91871c9.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3102,7 +3102,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> new_dependent_timespan_maker = new(
 ...     dependent_timespan_maker,
 ...     include_inner_starts=True,
@@ -3112,8 +3112,8 @@ show(result, key='voice_name')
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-bb332487adfb197094489ddb943596f7.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-18fa59655ce75c5ce3fc0b76cf3186b2.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3138,7 +3138,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> new_dependent_timespan_maker = new(
 ...     dependent_timespan_maker,
 ...     include_inner_stops=True,
@@ -3148,8 +3148,8 @@ show(result, key='voice_name')
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-6736037628fb71d8ef1ad10277849494.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5a159548d6375502b08a4b704fd43280.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3175,7 +3175,7 @@ show(result, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> new_dependent_timespan_maker = new(
 ...     dependent_timespan_maker,
 ...     include_inner_starts=True,
@@ -3186,8 +3186,8 @@ show(result, key='voice_name')
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-cef02126ad1c2aaf19c885feadf1d607.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8b7a78e86edd5f98e8ec22d1061c784f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3217,7 +3217,7 @@ show(result, key='voice_name', range_=(0, 75))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> rotated_dependent_timespan_maker = new(
 ...     new_dependent_timespan_maker,
 ...     rotation_indices=(1,),
@@ -3227,8 +3227,8 @@ show(result, key='voice_name', range_=(0, 75))
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name', range_=(0, 75))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2b1d25d9c60136f8967163e8a44a4c1e.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-cf977822448e06b413b7922a39b9d9a4.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3253,7 +3253,7 @@ show(result, key='voice_name', range_=(0, 75))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> rotated_dependent_timespan_maker = new(
 ...     new_dependent_timespan_maker,
 ...     rotation_indices=(1, -1),
@@ -3263,8 +3263,8 @@ show(result, key='voice_name', range_=(0, 75))
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name', range_=(0, 75))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-6ae61f6ed7a83b1b30720afde3e988c3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-64b470a3627fe959840b852f63552c90.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3291,15 +3291,15 @@ show(result, key='voice_name', range_=(0, 75))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> result = new_dependent_timespan_maker(
 ...     music_specifiers=music_specifiers,
 ...     target_timespan=timespantools.Timespan(17, 58),
 ...     timespan_inventory=new(timespan_inventory),
 ...     )
 >>> show(result, key='voice_name', range_=(0, 75))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-daa860f77801b811b39079aff6ce1dc6.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1727d609af10a3fcf52917482fc4872a.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3347,12 +3347,12 @@ show(note_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> note_rhythm_maker = rhythmmakertools.NoteRhythmMaker()
 >>> divisions = [(3, 8), (4, 8), (3, 16), (4, 16), (5, 8), (2, 4)]
 >>> show(note_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d0f66021e4860194d32ee0fa226ed174.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-40e841a13162e2b4be528acaac838282.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3384,7 +3384,7 @@ show(note_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> note_rhythm_maker = new(
 ...     note_rhythm_maker,
 ...     tie_specifier=rhythmmakertools.TieSpecifier(
@@ -3392,8 +3392,8 @@ show(note_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(note_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1c2192761535f741178fd5fc2ed22ed7.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-86f7c154d8fd09c7d90fefdf06a219b8.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3419,12 +3419,12 @@ show(note_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mask = rhythmmakertools.BooleanPattern(indices=[0], period=2)
 >>> note_rhythm_maker = rhythmmakertools.NoteRhythmMaker(output_masks=[mask])
 >>> show(note_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-fb60261fce39a6a8bed29c6bc1a39b14.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4e65e2bd4726862826160e641ec829c7.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3443,12 +3443,12 @@ show(note_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mask = rhythmmakertools.BooleanPattern(indices=[0], period=1)
 >>> note_rhythm_maker = rhythmmakertools.NoteRhythmMaker(output_masks=[mask])
 >>> show(note_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b8d4d2abe1d0cabd1dba685a0e5a2bcc.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a4399b30876b9f60a8ff5f2a6c513425.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3477,7 +3477,7 @@ show(talea_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
 ...     talea=rhythmmakertools.Talea(
 ...         counts=[1],
@@ -3485,8 +3485,8 @@ show(talea_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(talea_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a8d7d6245553b2c4f5d2e404e62ae27b.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9b449b6f11b57096a98ebdccd102393f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3509,14 +3509,14 @@ show(talea_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker = new(
 ...     talea_rhythm_maker,
 ...     talea__counts=[1, 2],
 ...     )
 >>> show(talea_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a91e80c7459af113e517ef98d44608db.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-543492a418c8be2ee97b8a3cb31400b3.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3536,14 +3536,14 @@ show(talea_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker = new(
 ...     talea_rhythm_maker,
 ...     talea__counts=[4, 3, 2, 1],
 ...     )
 >>> show(talea_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8d6fdf555decf2c32991c6d1f43307af.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-174e27ccde4e3d0034ea1e7727226208.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3578,14 +3578,14 @@ show(talea_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker = new(
 ...     talea_rhythm_maker,
 ...     extra_counts_per_division=[0, 1, 1],
 ...     )
 >>> show(talea_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f868ef7342d21df2f091666e876b44e7.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d8dd38fc17e1388a7b54e5964699d2c1.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3614,7 +3614,7 @@ show(talea_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker = new(
 ...     talea_rhythm_maker,
 ...     tie_specifier=rhythmmakertools.TieSpecifier(
@@ -3622,8 +3622,8 @@ show(talea_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(talea_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0aa7f18c24b9676851fc7ace0fbb408e.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2de5ae04083a209a82aae097df0ec23d.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3648,14 +3648,14 @@ show(talea_rhythm_maker_with_rests, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker_with_rests = new(
 ...     talea_rhythm_maker,
 ...     talea__counts=[4, -3, 2, 1],
 ...     )
 >>> show(talea_rhythm_maker_with_rests, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f4acf8cc0f640f8afb7dbc701a8bbc82.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4a003c511f23fb740744e238ff749cb1.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3679,7 +3679,7 @@ show(talea_rhythm_maker_with_rests, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> talea_rhythm_maker_with_rests = new(
 ...     talea_rhythm_maker,
 ...     burnish_specifier=rhythmmakertools.BurnishSpecifier(
@@ -3688,8 +3688,8 @@ show(talea_rhythm_maker_with_rests, divisions=divisions)
 ...         ),
 ...     )
 >>> show(talea_rhythm_maker_with_rests, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-56c4a8d2c9d313021bf1f182ccb3a96e.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c62c5af8b7f7d1ed53af20b15ec1c3a9.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3714,11 +3714,11 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = rhythmmakertools.IncisedRhythmMaker()
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d0f66021e4860194d32ee0fa226ed174.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-40e841a13162e2b4be528acaac838282.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3748,7 +3748,7 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
 ...     incise_specifier=rhythmmakertools.InciseSpecifier(
 ...         suffix_counts=[1],
@@ -3757,8 +3757,8 @@ show(incised_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f21215b14c3e76d687060a020bdca52a.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-eee435e4572b215932ed1eb3b45793d6.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3778,14 +3778,14 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = new(
 ...     incised_rhythm_maker,
 ...     incise_specifier__suffix_talea=[-1, -2, -3],
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-fafb95028809a8071ef2a59e4da26ec9.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a0bad098fd2f3f58b146e4fcfa428521.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3809,7 +3809,7 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
 ...     incise_specifier=rhythmmakertools.InciseSpecifier(
 ...         prefix_counts=[2, 1],
@@ -3818,8 +3818,8 @@ show(incised_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c2461da064af411639e8a2608af00305.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4914eb2c04ac712e690141e5f44e4fed.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3841,14 +3841,14 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = new(
 ...     incised_rhythm_maker,
 ...     incise_specifier__fill_with_notes=False,
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-25581a22cd4059e8966b0ff386bbbcc6.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-cda6f07032e7671996f42491ad4f0ea0.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3876,7 +3876,7 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
 ...     incise_specifier=rhythmmakertools.InciseSpecifier(
 ...         outer_divisions_only=True,
@@ -3888,8 +3888,8 @@ show(incised_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8245f754d4c0b647786ba2c3e22988f3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-153fcfab2c3441d3174d9796af4eaa16.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3914,7 +3914,7 @@ show(incised_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> incised_rhythm_maker = new(
 ...     incised_rhythm_maker,
 ...     tie_specifier=rhythmmakertools.TieSpecifier(
@@ -3922,8 +3922,8 @@ show(incised_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(incised_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9890ffbc1115862a9479f6a97bf677e3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0f966bbc068b6b2c247a0fbce17fa09c.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3948,11 +3948,11 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = rhythmmakertools.EvenDivisionRhythmMaker()
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2bcea48859d1e8378a750341c3315103.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-ed942538b235c1f43f3e1d7fba6f0bbb.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -3974,14 +3974,14 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = new(
 ...     even_division_rhythm_maker,
 ...     denominators=[8, 16],
 ...     )
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-042a232c8ba3c9adb624c404980efe18.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-225715f3a0be50555c592aedcc08b8c5.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4002,14 +4002,14 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = new(
 ...     even_division_rhythm_maker,
 ...     denominators=[8, 4, 16],
 ...     )
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-18b3464ab66c7d829de5417e6e668687.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1c38dfb462f1ee7b47b896b22c2b901c.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4036,15 +4036,15 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = new(
 ...     even_division_rhythm_maker,
 ...     denominators=[8],
 ...     extra_counts_per_division=(0, 1),
 ...     )
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-7bd6867c75e18e48ebf2c898a35a53b9.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-afe815c166c8d548038344646d0c5a99.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4066,7 +4066,7 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = new(
 ...     even_division_rhythm_maker,
 ...     tie_specifier=rhythmmakertools.TieSpecifier(
@@ -4074,8 +4074,8 @@ show(even_division_rhythm_maker, divisions=divisions)
 ...         ),
 ...     )
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4cc7ba58b448cb7add8a0024b1e90f9b.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d910fdc1b43298cf3922e2d2f2398fa9.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4095,14 +4095,14 @@ show(even_division_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> even_division_rhythm_maker = new(
 ...     even_division_rhythm_maker,
 ...     denominators=[8, 4, 16],
 ...     )
 >>> show(even_division_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-af43995b8651db6fd08d7d3e42ff809b.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-635823ab760757892ab3637928ee69c6.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4132,15 +4132,15 @@ show(composite_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> composite_rhythm_maker = consort.CompositeRhythmMaker(
 ...     default=talea_rhythm_maker,
 ...     last=note_rhythm_maker,
 ...     first=incised_rhythm_maker,
 ...     )
 >>> show(composite_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b1e38a72e659f0b2878d87c5401d2cd5.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-98637bb548c4b45d6e95c65309695830.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4183,11 +4183,11 @@ graph(six_eight_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> six_eight_meter = metertools.Meter((6, 8))
 >>> graph(six_eight_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-def059788733b2da292c28ae106a47f5.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-fe7135afeb9add75d641df1a2ce2d724.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4232,11 +4232,11 @@ graph(three_four_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> three_four_meter = metertools.Meter((3, 4))
 >>> graph(three_four_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-7e2283286be19b5809bee13cf64d83ee.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-397c9303f96c6fb98a1a9f775198a174.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4253,11 +4253,11 @@ graph(seven_eight_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> seven_eight_meter = metertools.Meter((7, 8))
 >>> graph(seven_eight_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-471b95516a5478acd802a75bc0f152fc.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-7bcab5f0456c4e0f9b25fdd2d3d4eebe.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4274,11 +4274,11 @@ graph(twelve_eight_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> twelve_eight_meter = metertools.Meter((12, 8))
 >>> graph(twelve_eight_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-58c5711f30ce38a0be0ec2aad3b65181.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-4e8192882b5502a3bd4ffbc3a32f2399.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4300,11 +4300,11 @@ graph(four_four_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> four_four_meter = metertools.Meter((4, 4))
 >>> graph(four_four_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-12601707db5ddc467e3296e8c680ba43.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-c1d51a332e6190a28ea0947e71379ffb.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4324,14 +4324,14 @@ print(four_four_meter.pretty_rtm_format)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> print(four_four_meter.pretty_rtm_format)
 (4/4 (
 	1/4
 	1/4
 	1/4
 	1/4))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4353,11 +4353,11 @@ graph(arbitrary_meter_1)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> arbitrary_meter_1 = metertools.Meter('(4/4 ((2/4 (1/4 1/4)) (2/4 (1/4 1/4))))')
 >>> graph(arbitrary_meter_1)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-24dec0c4fa2e028c1bffb9c05dbc48a3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-e905159a8658de7f1859de072670f0b4.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4375,11 +4375,11 @@ graph(arbitrary_meter_2)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> arbitrary_meter_2 = metertools.Meter('(4/4 ((2/4 (1/4 (1/4 (1/8 1/8)))) 1/2))')
 >>> graph(arbitrary_meter_2)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-dd9099ec3dbba4936095eec5d635cc0d.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-6e2f674f56889a9783d0c6de99574e20.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4417,11 +4417,11 @@ six_eight_meter.depthwise_offset_inventory[0]
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> six_eight_meter = metertools.Meter((6, 8))
 >>> six_eight_meter.depthwise_offset_inventory[0]
 (Offset(0, 1), Offset(3, 4))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4442,11 +4442,11 @@ show(six_eight_measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> six_eight_measure = Measure((6, 8), "r8 c'2 r8")
 >>> show(six_eight_measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2dd583c36ffd0a13968eee4ac11dcfb5.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-aa98e95cacfe67cb97306b5b5cca3f9a.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4466,10 +4466,10 @@ six_eight_meter.depthwise_offset_inventory[1]
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> six_eight_meter.depthwise_offset_inventory[1]
 (Offset(0, 1), Offset(3, 8), Offset(3, 4))
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4487,11 +4487,11 @@ show(six_eight_measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mutate(six_eight_measure).rewrite_meter(six_eight_meter)
 >>> show(six_eight_measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c0edb6ffb12fe0ee5fb467e0bfefecdd.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-af58a9641459050c9e95b34751c45896.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4510,14 +4510,14 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> parseable = "abj: | 2/4 c'2 ~ |"
 >>> parseable += "| 4/4 c'32 d'2.. ~ d'16 e'32 ~ |"
 >>> parseable += "| 2/4 e'2 |"
 >>> staff = Staff(parseable)
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-329490b244b088f012cb5146859cdab0.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2ec2fbbf23a5be650ea22754d27b8acd.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4536,11 +4536,11 @@ graph(four_four_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> four_four_meter = metertools.Meter((4, 4))
 >>> graph(four_four_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-12601707db5ddc467e3296e8c680ba43.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-c1d51a332e6190a28ea0947e71379ffb.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4558,11 +4558,11 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mutate(staff[1]).rewrite_meter(four_four_meter)
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-52ed3c73b623b7b0d9a2c6230084a264.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f4b8d9506e0a6ff089aec47344ad8445.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4583,13 +4583,13 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> two_two_meter = metertools.Meter((2, 2))
 >>> staff = Staff(parseable)
 >>> mutate(staff[1]).rewrite_meter(two_two_meter)
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-467c7a453dd4de93da0cc1c7acbe0a87.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-200c8d40e8973dc2f1944a9edb72ae14.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4615,11 +4615,11 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((3, 4), "c'32 d'8 e'8 fs'4...")
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8d4bc784b86bdade27d371532ab358a2.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-af1c89611847dbd486670934e1e0bd6d.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4637,11 +4637,11 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mutate(measure).rewrite_meter((3, 4))
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d4d52cf91b08080c4067643d24faaf2a.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4f273dfc5f1a20d31f14b94ba5b3b298.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4659,12 +4659,12 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((3, 4), "c'32 d'8 e'8 fs'4...")
 >>> mutate(measure).rewrite_meter((3, 4), maximum_dot_count=2)
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-40b68312fd44f949b40de163b21588c3.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1e978762f480d49b9210afa4ffbb0c6f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4682,12 +4682,12 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((3, 4), "c'32 d'8 e'8 fs'4...")
 >>> mutate(measure).rewrite_meter((3, 4), maximum_dot_count=1)
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5fba6e827130a27fefae4843d2b21248.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0aa6a741fdd01cd86350931b59f5f30a.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4705,12 +4705,12 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((3, 4), "c'32 d'8 e'8 fs'4...")
 >>> mutate(measure).rewrite_meter((3, 4), maximum_dot_count=0)
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2ca50ee6f27ae56bae476fb9dc1faafa.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b750c5f1e07b78a4e17b7f385e05137e.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4744,11 +4744,11 @@ graph(nine_eight_meter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> nine_eight_meter = metertools.Meter((9, 8))
 >>> graph(nine_eight_meter)
-\end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-18bdc18e7331fb0ae5a23dce68bb4246.pdf}
+\end{lstlisting}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-5755ae3617b67fa91303a12337ac2715.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4762,11 +4762,11 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((9, 8), "c'2 d'2 e'8")
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f459f8c64dd96ba762e4bdebba6f4680.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-57e5e940d98f89220ccc28311f50cc7e.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4780,11 +4780,11 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> mutate(measure).rewrite_meter(nine_eight_meter)
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-63f30ee6e2e244440af9d6f1e0f84a02.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-11dc9744d3dc31ac71bf7d3b62d9d797.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4812,15 +4812,15 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> measure = Measure((9, 8), "c'2 d'2 e'8")
 >>> mutate(measure).rewrite_meter(
 ...     nine_eight_meter,
 ...     boundary_depth=1,
 ...     )
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-93c0260083a9ae2ad25a3c7c064e3024.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-90f242a2ec34e7c5c515c6b3c40a8303.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4861,22 +4861,22 @@ show(measure)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> parseable = "abj: | 4/4 c'16 ~ c'4 d'8. ~ "
 >>> parseable += "2/3 { d'8. ~ 3/5 { d'16 e'8 ~ e'16 f'16 ~ } } "
 >>> parseable += "f'4 |"
 >>> measure = parse(parseable)
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-270f471c0052391c9bf1a5df2ccc4474.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-6488b259469286278b03a4f619cfca2c.pdf}
+\begin{lstlisting}
 >>> mutate(measure).rewrite_meter(
 ...     measure,
 ...     boundary_depth=1,
 ...     )
 >>> show(measure)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f9d044a4106c8869b71b8035d108035f.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-008efee4241bfb25e55ebf2dd32107ff.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4909,13 +4909,13 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> staff = Staff(context_name='RhythmicStaff')
 >>> staff.extend("{ c'2 c'4 } { c'4. c'4. } { c'2 ~ c'8 c'8 }")
 >>> attach(TimeSignature((3, 4)), staff)
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b4a2116ab0031b6068b1112932629bac.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4806a909d475b76770f30034849c953e.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4937,13 +4937,13 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> for container in staff:
 ...     mutate(container).rewrite_meter((3, 4), boundary_depth=1)
 ...
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0cef77f45f31e31ad271d15c9c32edf8.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-ae7b75d383e700d9e1beb062e7aa3e19.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -4969,7 +4969,7 @@ show(staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> staff = Staff(context_name='RhythmicStaff')
 >>> staff.extend("{ c'2 c'4 } { c'4. c'4. } { c'2 ~ c'8 c'8 }")
 >>> attach(TimeSignature((6, 8)), staff)
@@ -4977,8 +4977,8 @@ show(staff)
 ...     mutate(container).rewrite_meter((6, 8), boundary_depth=1)
 ...
 >>> show(staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-58a85c4734fd2a15643aa2409cbff0e5.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-7530efcfc986c51e9c8cbef83112c665.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5024,7 +5024,7 @@ show(piano_staff)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> upper_staff = Staff("c'8 d'4. e'8 f'4.")
 >>> lower_staff = Staff(r'\clef bass c4 b,4 a,2')
 >>> piano_staff = scoretools.StaffGroup(
@@ -5032,8 +5032,8 @@ show(piano_staff)
 ...     context_name='PianoStaff',
 ...     )
 >>> show(piano_staff)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-bf3a249e2b4eac93b1884bab1a122a10.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f2d459a62659e0e3f88c3214c38491e2.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5055,7 +5055,7 @@ show(piano_staff_counter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> leaves = piano_staff.select_leaves(allow_discontiguous_leaves=True)
 >>> piano_staff_counter = metertools.OffsetCounter(leaves)
 >>> print(format(piano_staff_counter))
@@ -5069,11 +5069,11 @@ metertools.OffsetCounter(
         durationtools.Offset(1, 1): 2,
         }
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> show(piano_staff_counter)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b2c45afc4a29ecdf622c76195f1251ae.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-482b6aa2c1b1bb8069e1a07eb951f493.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5100,7 +5100,7 @@ show(timespan_counter)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespans = timespantools.TimespanInventory([
 ...     timespantools.Timespan(-1, 10),
 ...     timespantools.Timespan(5, 15),
@@ -5109,8 +5109,8 @@ show(timespan_counter)
 ...     ])
 >>> timespan_counter = metertools.OffsetCounter(timespans)
 >>> show(timespan_counter)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-92e87e63b34df27878f535ac2f8e07ac.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-b38f797d3add77f7983c4d47f9a5a019.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5156,7 +5156,7 @@ for offset, weight in sorted(kernel_44.kernel.items()):
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> meter = metertools.Meter((4, 4))
 >>> kernel_44 = metertools.MetricAccentKernel.from_meter(meter, denominator=16)
 >>> for offset, weight in sorted(kernel_44.kernel.items()):
@@ -5179,7 +5179,7 @@ for offset, weight in sorted(kernel_44.kernel.items()):
 7/8	2/33
 15/16	1/33
 1	4/33
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5200,11 +5200,11 @@ float(response)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> response = kernel_44(piano_staff_counter)
 >>> float(response)
 0.5454545454545454
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5230,7 +5230,7 @@ for offset, count in sorted(piano_staff_counter.items()):
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> total = Multiplier(0, 1)
 >>> for offset, count in sorted(piano_staff_counter.items()):
 ...     weight = Multiplier(0, 1)
@@ -5248,7 +5248,7 @@ for offset, count in sorted(piano_staff_counter.items()):
 1/2:	count: 4, weight: 1/11, multiplied: 4/11, total: 10/11
 5/8:	count: 2, weight: 2/33, multiplied: 4/33, total: 34/33
 1:	count: 2, weight: 4/33, multiplied: 8/33, total: 14/11
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5266,11 +5266,11 @@ kernel_54 = metertools.MetricAccentKernel.from_meter((5, 4), denominator=16)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> kernel_34 = metertools.MetricAccentKernel.from_meter((3, 4), denominator=16)
 >>> kernel_78 = metertools.MetricAccentKernel.from_meter((7, 8), denominator=16)
 >>> kernel_54 = metertools.MetricAccentKernel.from_meter((5, 4), denominator=16)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5288,18 +5288,18 @@ float(kernel_54(piano_staff_counter))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> float(kernel_34(piano_staff_counter))
 0.5384615384615384
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> float(kernel_78(piano_staff_counter))
 0.4482758620689655
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> float(kernel_54(piano_staff_counter))
 0.4186046511627907
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5334,13 +5334,13 @@ show(offset_counter, range_=(0, 5))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> offset_counter = metertools.OffsetCounter([
 ...     (0, 4), (4, 4), (8, 4), (12, 4), (16, 4),
 ...     ])
 >>> show(offset_counter, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c74006582b28efb1d61d9a6f219c91c8.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2a1bd633d6cdf8ea4218da26fe9117bd.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5363,19 +5363,19 @@ show(fitted_meters, range_=(0, 5))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([(3, 4), (4, 4), (5, 4)])
 >>> show(permitted_meters, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-903f91432f62df75348b48cdb9d7be3d.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-97cb93e1b08bcf0647a488b20219cc10.pdf}
+\begin{lstlisting}
 >>> fitted_meters = metertools.Meter.fit_meters_to_expr(
 ...     expr=offset_counter,
 ...     meters=permitted_meters,
 ...     )
 >>> show(fitted_meters, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-96511fa6cd9448347d5f584042ff653c.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4302134ea59ac747c9a01663c295b965.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5406,7 +5406,7 @@ show(fitted_meters, range_=(0, 5))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> offset_counter = metertools.OffsetCounter([
 ...     (0, 4), (3, 4), (5, 4), (10, 4), (15, 4), (20, 4),
 ...     ])
@@ -5415,12 +5415,12 @@ show(fitted_meters, range_=(0, 5))
 ...     meters=permitted_meters,
 ...     )
 >>> show(offset_counter, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-51cf25a6929362a969d24f3932cb3e52.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-562bfc1e85d4abe82375f94a38565772.pdf}
+\begin{lstlisting}
 >>> show(fitted_meters, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5f06675a8d3349cae1b5fb107c86bb48.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1e906f7720350ba0f7ef4c3963867450.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5447,15 +5447,15 @@ show(fitted_meters, range_=(0, 5))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> fitted_meters = metertools.Meter.fit_meters_to_expr(
 ...     expr=offset_counter,
 ...     meters=permitted_meters,
 ...     maximum_run_length=1,
 ...     )
 >>> show(fitted_meters, range_=(0, 5))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-2e3a1aefb733123cb0dd4a38b692380f.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-69473953e224f3d721debebdcaba043f.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5490,7 +5490,7 @@ show(timespan_inventory, key='voice_name')
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> music_specifiers = collections.OrderedDict([
 ...     ('Voice 1', None),
 ...     ('Voice 2', None),
@@ -5503,8 +5503,8 @@ show(timespan_inventory, key='voice_name')
 ...     target_timespan=target_timespan,
 ...     )
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e335a4b9080808b2bc75e427feb0a946.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-36f23e7a3d2536cbc36a14785b3da892.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5522,11 +5522,11 @@ show(offset_counter, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> offset_counter = metertools.OffsetCounter(timespan_inventory)
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5557,7 +5557,7 @@ show(fitted_meters, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([
 ...     (5, 8), (3, 4), (6, 8), (7, 8), (4, 4),
 ...     ])
@@ -5567,12 +5567,12 @@ show(fitted_meters, range_=(0, (19, 4)))
 ...     maximum_run_length=1,
 ...     )
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
+\begin{lstlisting}
 >>> show(fitted_meters, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a67d2be37f9d9ec06d5edda3e3e7f244.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a0399ccb142fa40b5b23a853584153d0.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5599,7 +5599,7 @@ show(fitted_meters, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([
 ...     (3, 4), (6, 8), (7, 8), (4, 4),
 ...     ])
@@ -5609,12 +5609,12 @@ show(fitted_meters, range_=(0, (19, 4)))
 ...     meters=permitted_meters,
 ...     )
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
+\begin{lstlisting}
 >>> show(fitted_meters, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-9a5158818ad5fbad7bdb5f19fd966315.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0fd569018c97498b4329402b38ae94da.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5638,18 +5638,18 @@ show(fitted_meters, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> fitted_meters = metertools.Meter.fit_meters_to_expr(
 ...     expr=offset_counter,
 ...     meters=permitted_meters,
 ...     )
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
+\begin{lstlisting}
 >>> show(fitted_meters, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4dea6222540afc3cf0b84d79ca2bc728.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-f9b39832a0e1bbda098663f5f968ab26.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5678,7 +5678,7 @@ show(fitted_meters, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([
 ...     (2, 4), (4, 8), (3, 4), (6, 8), (7, 8), (4, 4),
 ...     ])
@@ -5688,12 +5688,12 @@ show(fitted_meters, range_=(0, (19, 4)))
 ...     meters=permitted_meters,
 ...     )
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
+\begin{lstlisting}
 >>> show(fitted_meters, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-a1f558ce38e84f316c17684a30bd0fac.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1df98296fbefb2badd1fb802e3010f9c.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5720,7 +5720,7 @@ show(poorly_fitted_meters, range_=(0, (19, 4)))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([
 ...     (2, 4), (3, 16), (3, 4), (4, 4), (4, 8), (5, 16),
 ...     (5, 4), (5, 8), (6, 8), (7, 8), (9, 8),
@@ -5731,12 +5731,12 @@ show(poorly_fitted_meters, range_=(0, (19, 4)))
 ...     meters=permitted_meters,
 ...     )
 >>> show(offset_counter, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0be2900a4872bf90fe9bfb22c1e66b72.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e2236dbc6731dd2e7d1cbfca9552ed23.pdf}
+\begin{lstlisting}
 >>> show(poorly_fitted_meters, range_=(0, (19, 4)))
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-0750946d1cd0bfe69efd61bdaf0de800.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-350c7283ff14d8bef6a1b67c1b437cfc.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5778,13 +5778,13 @@ of notation. The following \texttt{build\_score()} function sketches one
 possible approach to combining these techniques:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:build_score />[strip_prompt]
+<abjadextract time_tools:build_score />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def build_score(
     performed_rhythm_maker,
     permitted_meters,
@@ -5830,7 +5830,7 @@ def build_score(
             rewrite_meters(phrase, fitted_meters, meter_boundaries)
     add_time_signature_context(score, fitted_meters)
     return score
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5859,11 +5859,11 @@ print(format(score))
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-e335a4b9080808b2bc75e427feb0a946.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-36f23e7a3d2536cbc36a14785b3da892.pdf}
+\begin{lstlisting}
 >>> score_template = templatetools.GroupedRhythmicStavesScoreTemplate(
 ...     staff_count=4, with_clefs=True,
 ...     )
@@ -5893,7 +5893,7 @@ print(format(score))
         }
     >>
 >>
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5938,13 +5938,13 @@ they are fed to rhythm-makers for rhythm generation in order to ensure that no
 generated rhythm crosses any bar-lines:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:get_meters_and_meter_boundaries />[strip_prompt]
+<abjadextract time_tools:get_meters_and_meter_boundaries />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def get_meters_and_meter_boundaries(timespan_inventory, permitted_meters):
     offset_counter = metertools.OffsetCounter(timespan_inventory)
     fitted_meters = metertools.Meter.fit_meters_to_expr(
@@ -5958,7 +5958,7 @@ def get_meters_and_meter_boundaries(timespan_inventory, permitted_meters):
         start=Offset(0),
         )
     return fitted_meters, meter_boundaries
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -5986,7 +5986,7 @@ for component in inspect_(voice).get_parentage():
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> timespan = timespan_inventory[0]
 >>> print(format(timespan))
 consort.tools.PerformedTimespan(
@@ -5996,8 +5996,8 @@ consort.tools.PerformedTimespan(
     original_stop_offset=durationtools.Offset(19, 4),
     voice_name='Voice 3',
     )
-\end{minted}
-\begin{minted}{pycon}
+\end{lstlisting}
+\begin{lstlisting}
 >>> score = score_template()
 >>> voice = score[timespan.voice_name]
 >>> for component in inspect_(voice).get_parentage():
@@ -6007,7 +6007,7 @@ Voice()
 <RhythmicStaff-"Staff 3"{1}>
 <StaffGroup-"Grouped Rhythmic Staves Staff Group"<<4>>>
 <Score-"Grouped Rhythmic Staves Score"<<1>>>
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6018,13 +6018,13 @@ This can be accomplished by building a dictionary whose keys are voice names
 and whose values are timespan inventories:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:get_all_voicewise_timespans />[strip_prompt]
+<abjadextract time_tools:get_all_voicewise_timespans />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def get_all_voicewise_timespans(timespan_inventory):
     voicewise_timespans = {}
     for timespan in timespan_inventory:
@@ -6033,7 +6033,7 @@ def get_all_voicewise_timespans(timespan_inventory):
             voicewise_timespans[voice_name] = timespantools.TimespanInventory()
         voicewise_timespans[voice_name].append(timespan)
     return voicewise_timespans
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6047,13 +6047,13 @@ resulting sequence of durations, along with an input rhythm-maker and an
 optional seed value can be sent to another function for rhythm generation:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:make_performed_music />[strip_prompt]
+<abjadextract time_tools:make_performed_music />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def make_performed_music(rhythm_maker, timespans, meter_boundaries, seed=0):
     split_timespans = timespantools.TimespanInventory()
     for shard in timespans.split_at_offsets(meter_boundaries):
@@ -6061,7 +6061,7 @@ def make_performed_music(rhythm_maker, timespans, meter_boundaries, seed=0):
     durations = [_.duration for _ in split_timespans if _.duration]
     music = make_music(rhythm_maker, durations, seed=seed)
     return music
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6075,13 +6075,13 @@ function for rhythm generation. As demonstrated in
 from note rhythm-makers which use output masks to silence all output divisions:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:make_silent_music />[strip_prompt]
+<abjadextract time_tools:make_silent_music />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def make_silent_music(start_offset, stop_offset, meter_boundaries):
     silence_timespan = timespantools.Timespan(start_offset, stop_offset)
     shards = silence_timespan.split_at_offsets(meter_boundaries)
@@ -6090,7 +6090,7 @@ def make_silent_music(start_offset, stop_offset, meter_boundaries):
     rhythm_maker = rhythmmakertools.NoteRhythmMaker(output_masks=[mask])
     music = make_music(rhythm_maker, durations)
     return music
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6106,13 +6106,13 @@ prolated tuplets which can then be wrapped inside a larger container
 representing a complete phrase:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:make_music />[strip_prompt]
+<abjadextract time_tools:make_music />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def make_music(rhythm_maker, durations, seed=0):
     music = rhythm_maker(durations, rotation=seed)
     for i, division in enumerate(music):
@@ -6122,7 +6122,7 @@ def make_music(rhythm_maker, durations, seed=0):
             music[i] = scoretools.Container(division)
     music = scoretools.Container(music)
     return music
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6151,13 +6151,13 @@ in a \sfrac[big]{4}{8} measure is rewritten with a meter of \sfrac[big]{5}{8}, n
 \sfrac[big]{4}{8}:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:rewrite_meters />[strip_prompt]
+<abjadextract time_tools:rewrite_meters />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def rewrite_meters(phrase, meters, meter_boundaries):
     pairs = list(zip(meters, meter_boundaries))
     for division in phrase:
@@ -6179,7 +6179,7 @@ def rewrite_meters(phrase, meters, meter_boundaries):
                 boundary_depth=1,
                 initial_offset=initial_offset,
                 )
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6200,13 +6200,13 @@ a definition looks like can be found in the various \texttt{stylesheet}
 sections of the source code appendices to this document:
 
 \begin{comment}
-<abjadextract dissertation.py.time_tools:add_time_signature_context />[strip_prompt]
+<abjadextract time_tools:add_time_signature_context />[strip_prompt]
 \end{comment}
 
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{python}
+\begin{lstlisting}
 def add_time_signature_context(score, meters):
     time_signatures = [_.implied_time_signature for _ in meters]
     measures = scoretools.make_spacer_skip_measures(time_signatures)
@@ -6216,7 +6216,7 @@ def add_time_signature_context(score, meters):
         name='TimeSignatureContext',
         )
     score.insert(0, time_signature_context)
-\end{minted}
+\end{lstlisting}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6248,7 +6248,7 @@ show(performed_rhythm_maker, divisions=divisions)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> permitted_meters = metertools.MeterInventory([
 ...     (2, 4), (4, 8), (3, 4), (6, 8), (7, 8), (4, 4),
 ...     ])
@@ -6261,8 +6261,8 @@ show(performed_rhythm_maker, divisions=divisions)
 ...     talea=rhythmmakertools.Talea([1, 2, 3, 4, 5], 16),
 ...     )
 >>> show(performed_rhythm_maker, divisions=divisions)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-12a3ce90ede7ebf565493e80cd2b641b.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-6226facd5b3ebd1b93b81442a7bff319.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6289,7 +6289,7 @@ show(score)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> score = build_score(
 ...     performed_rhythm_maker=performed_rhythm_maker,
 ...     permitted_meters=permitted_meters,
@@ -6298,11 +6298,11 @@ show(score)
 ...     )
 >>> consort.annotate(score)
 >>> show(score)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,page=1]{assets/lilypond-4cc99eb25ad6bff16e0d80e74536a91c.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,page=1]{assets/lilypond-4f155651f325bf7f7eafb4883aa30302.pdf}
 \newline
 \newline
-\noindent\includegraphics[max width=\textwidth,page=2]{assets/lilypond-4cc99eb25ad6bff16e0d80e74536a91c.pdf}
+\noindent\includegraphics[max width=\textwidth,page=2]{assets/lilypond-4f155651f325bf7f7eafb4883aa30302.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -6333,15 +6333,15 @@ show(score)
 \begin{abjadbookoutput}
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
-\begin{minted}{pycon}
+\begin{lstlisting}
 >>> multiplier = Duration(24, 4) / Duration(19, 4)
 >>> timespan_inventory = timespan_inventory.reflect()
 >>> timespan_inventory = timespan_inventory.stretch(multiplier)
 >>> timespan_inventory = timespan_inventory.round_offsets(Duration(1, 8))
 >>> show(timespan_inventory, key='voice_name')
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-1aa50b273f0fe875eb2fa2112aa276cb.pdf}
-\begin{minted}{pycon}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-18aa5095c4d2a40e30ad09eafabb3032.pdf}
+\begin{lstlisting}
 >>> score = build_score(
 ...     performed_rhythm_maker=performed_rhythm_maker,
 ...     permitted_meters=permitted_meters,
@@ -6350,14 +6350,14 @@ show(score)
 ...     )
 >>> consort.annotate(score)
 >>> show(score)
-\end{minted}
-\noindent\includegraphics[max width=\textwidth,page=1]{assets/lilypond-9a60e0606f9bf6de2f325689ff40447b.pdf}
+\end{lstlisting}
+\noindent\includegraphics[max width=\textwidth,page=1]{assets/lilypond-598efa22bd525b6d023acdeda6043e93.pdf}
 \newline
 \newline
-\noindent\includegraphics[max width=\textwidth,page=2]{assets/lilypond-9a60e0606f9bf6de2f325689ff40447b.pdf}
+\noindent\includegraphics[max width=\textwidth,page=2]{assets/lilypond-598efa22bd525b6d023acdeda6043e93.pdf}
 \newline
 \newline
-\noindent\includegraphics[max width=\textwidth,page=3]{assets/lilypond-9a60e0606f9bf6de2f325689ff40447b.pdf}
+\noindent\includegraphics[max width=\textwidth,page=3]{assets/lilypond-598efa22bd525b6d023acdeda6043e93.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 

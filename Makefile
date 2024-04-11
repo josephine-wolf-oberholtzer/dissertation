@@ -1,3 +1,5 @@
+ABJADBOOK := python -m abjadbook
+
 all:
 	make clean
 	make collect
@@ -19,7 +21,7 @@ examples:
 	$(MAKE) -C assets examples
 
 abjad/book:
-	abjad-book \
+	$(ABJADBOOK) \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
@@ -28,7 +30,7 @@ abjad/book:
 	say "rerendered all chapters"
 
 abjad/book/notation:
-	abjad-book \
+	$(ABJADBOOK) \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
@@ -37,7 +39,7 @@ abjad/book/notation:
 	say "rerendered chapter 2"
 
 abjad/book/time-tools:
-	abjad-book \
+	$(ABJADBOOK) \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
@@ -46,7 +48,7 @@ abjad/book/time-tools:
 	say "rerendered chapter 3"
 
 abjad/book/composition:
-	abjad-book \
+	$(ABJADBOOK) \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
@@ -55,7 +57,7 @@ abjad/book/composition:
 	say "rerendered chapter 4"
 
 abjad/book/practicalities:
-	abjad-book \
+	$(ABJADBOOK) \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
